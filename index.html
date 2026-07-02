@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEZOR — Cinematic Video Editing & Visual Storytelling</title>
+    <meta name="description" content="NEZOR is the creative studio of Nayana Sree — cinematic video editor and storyteller based in India. Specialised in post-production, color grading, and visual narratives.">
+    <!-- Inline SVG favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23050508'/><text x='50' y='72' font-family='Arial Black,sans-serif' font-size='52' font-weight='900' fill='white' text-anchor='middle' letter-spacing='-2'>NZ</text></svg>">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Cinematic Scanline Overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg viewBox="0 0 120 60" width="140" height="70" class="neon-svg-logo">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff2d78" />
+                            <stop offset="50%" stop-color="#b44fff" />
+                            <stop offset="100%" stop-color="#00d4ff" />
+                        </linearGradient>
+                    </defs>
+                    <text x="6" y="50" font-family="Arial Black, Impact, sans-serif" font-size="52" font-weight="900" fill="none" stroke="url(#logoGrad)" stroke-width="1.2" letter-spacing="4">NEZOR</text>
+                </svg>
+            </div>
+            <div class="preloader-title">NEZOR</div>
+            <div class="preloader-subtitle">VISUAL STORYTELLING STUDIO</div>
+            <div class="preloader-progress-bar">
+                <div class="preloader-progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="preloader-percentage" id="progress-text">0%</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <!-- High-End Minimalist Studio Monogram Logo -->
+                <svg viewBox="0 0 90 30" width="90" height="30" class="nav-logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff2d78" />
+                            <stop offset="50%" stop-color="#b44fff" />
+                            <stop offset="100%" stop-color="#00d4ff" />
+                        </linearGradient>
+                    </defs>
+                    <text x="2" y="24" font-family="Arial Black, Impact, sans-serif" font-size="24" font-weight="900" fill="url(#logoGradNav)" letter-spacing="3">NEZOR</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#intro" class="nav-link">Intro</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#workflow" class="nav-link">Timeline</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link contact-btn-nav">Hire Me</a>
+            </nav>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <!-- 3D Perspective Grid Background -->
+        <div class="grid-background-container">
+            <div class="perspective-grid"></div>
+            <div class="ambient-glow purple-glow"></div>
+            <div class="ambient-glow blue-glow"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-label fade-in-up">NEZOR — CINEMATIC STUDIO</div>
+            <h1 class="hero-title fade-in-up delay-1">
+                CRAFTING STORIES<br>
+                THAT <span class="gradient-text animate-gradient">Breathe Life</span>
+            </h1>
+            <p class="hero-description fade-in-up delay-2">
+                Precision pacing, rich atmospheric color grading, and custom sound design tailored to establish high-impact narrative flow.
+            </p>
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-play"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#intro" class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow">
+                <i class="fa-solid fa-angle-down"></i>
+            </span>
+        </a>
+    </section>
+
+    <!-- Intro Video Section -->
+    <section class="intro-section" id="intro">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Featured Intro</span>
+                <h2 class="section-title">The Showreel</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="intro-video-container reveal">
+                <div class="video-wrapper">
+                    <video id="intro-video" class="main-video-player" poster="https://i.postimg.cc/kXpDCThZ/nayana2.jpg" controls preload="metadata">
+                        <source src="https://cdn.imageurlgenerator.com/uploads/4c075b30-1efe-4336-8393-9c885f8613a9.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" id="video-overlay">
+                        <button class="video-play-btn" id="video-play-btn" aria-label="Play video">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <span class="overlay-play-text">Click to Play Intro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section (Consolidated, no category tags) -->
+    <section class="projects-section" id="projects">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Showcase</span>
+                <h2 class="section-title">Selected Works</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- Grid -->
+            <div class="projects-grid reveal">
+                <!-- Project 1: Automotive Lamborghini -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/fc57e958-6cae-48a2-b0c6-785369af6e8a.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project1.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/fc57e958-6cae-48a2-b0c6-785369af6e8a.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project I</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Real Estate Villa -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/419bd4d0-239c-4a93-bf86-5e7945ef5c02.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project2.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/419bd4d0-239c-4a93-bf86-5e7945ef5c02.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project II</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Phonk Music Video -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/fd221485-5fad-4f52-8fe4-3db8662a0415.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project3.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/fd221485-5fad-4f52-8fe4-3db8662a0415.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project III</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Mrunal Thakur -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/f7958973-7aa8-4778-90c6-7cfb7f2bdc63.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project4.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/f7958973-7aa8-4778-90c6-7cfb7f2bdc63.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project IV</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 5: SASS1 AE -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/4e40f140-603c-4535-ba26-d05f5d94cfb6.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project5.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/4e40f140-603c-4535-ba26-d05f5d94cfb6.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project V</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Andrew Garfield -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/6af41dbc-1829-4d9f-83a9-328087ac5b63.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project6.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/6af41dbc-1829-4d9f-83a9-328087ac5b63.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-face-laugh"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project VI</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Street Chase -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/0380ae26-1ac2-48e8-afaa-2815ae209c75.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project7.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/0380ae26-1ac2-48e8-afaa-2815ae209c75.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project VII</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Cinema Essay -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/bd51acdb-6540-4b43-95fa-9531039d9ad1.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project8.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/bd51acdb-6540-4b43-95fa-9531039d9ad1.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project VIII</h3></div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Deekshu -->
+                <div class="project-card" data-video="https://cdn.imageurlgenerator.com/uploads/41164f28-af09-4369-8387-5d30f7774fc4.mp4">
+                    <div class="card-inner">
+                        <div class="video-preview-container">
+                            <video
+                                class="card-video-preview"
+                                loop
+                                muted
+                                playsinline
+                                preload="metadata"
+                                poster="images/project9.png">
+                                <source src="https://cdn.imageurlgenerator.com/uploads/41164f28-af09-4369-8387-5d30f7774fc4.mp4#t=1" type="video/mp4">
+                            </video>
+                            <div class="card-media-fallback">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                            </div>
+                            <div class="hover-play-indicator"><i class="fa-solid fa-volume-xmark"></i> Muted Preview</div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project IX</h3></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Video Playback -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous project">&lsaquo;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next project">&rsaquo;</button>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content">
+            <video id="lightbox-video" controls autoplay class="lightbox-player"></video>
+            <div class="lightbox-caption">
+                <h3 class="lightbox-title" id="lightbox-title">Project Title</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <!-- Profile Image -->
+                <div class="about-image-wrapper reveal">
+                    <div class="image-border-glow">
+                        <img src="https://i.postimg.cc/kXpDCThZ/nayana2.jpg" alt="Nayana Sree — Creator of NEZOR" class="about-image">
+                    </div>
+                </div>
+                <!-- About Info -->
+                <div class="about-info-wrapper reveal">
+                    <span class="section-tag">The Creator Behind NEZOR</span>
+                    <h2 class="about-title">Hi, I'm Nayana Sree.</h2>
+                    <p class="about-bio">
+                        I'm the creative force behind <strong>NEZOR</strong> — a one-person cinematic studio built on the belief that every frame should have a reason to exist. As a self-taught video editor and visual storyteller based in India, I don't just cut clips — I engineer emotional experiences. Each project I take on is obsessed over, frame by frame, beat by beat, until the story breathes on its own.
+                    </p>
+                    <p class="about-bio">
+                        My editing philosophy is simple: <em>precision kills mediocrity</em>. Whether it's a 15-second reel that stops the scroll or a full cinematic sequence that leaves you speechless — I bring the same ruthless attention to pacing, color, and sound. NEZOR is not an agency. It's a vision. My vision.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-num">15+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">10+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">1+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="skills-wrapper">
+                        <h4 class="skills-title">Core Toolkit</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Premiere Pro</span>
+                            <span class="skill-tag">After Effects</span>
+                            <span class="skill-tag">Color Grading</span>
+                            <span class="skill-tag">Motion Graphics</span>
+                            <span class="skill-tag">Reels</span>
+                            <span class="skill-tag">Sound Design</span>
+                            <span class="skill-tag">VFX Basics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customized Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Collaboration</span>
+                <h2 class="section-title">Custom Services</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- Single premium card explaining custom service request -->
+            <div class="custom-services-container reveal">
+                <div class="custom-service-card">
+                    <div class="card-glow-borders"></div>
+                    <div class="custom-service-content">
+                        <div class="custom-icon">⚡</div>
+                        <h3 class="custom-header">Tailored Post-Production Workflows</h3>
+                        <p class="custom-description">
+                            Every video project carries a distinct rhythm, vision, and audience objective. Rather than locking your creative vision into pre-made service boxes or standardized pricing, I offer **fully customized, tailored video editing packages** suited to your exact footage, stylistic preference, and distribution goals.
+                        </p>
+                        <p class="custom-subdescription">
+                            Whether you need a high-energy vertical reel package, a cinematic automotive sequence, real estate marketing, or sound design grading, get in touch to outline your story and build a package that fits.
+                        </p>
+                        
+                        <div class="custom-action-channels">
+                            <div class="channel-line">
+                                <span class="label">Ready to outline your edit?</span>
+                            </div>
+                            <div class="channel-actions-grid">
+                                <a href="mailto:nayanasreed@gmail.com" class="channel-btn btn-mail-custom">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Contact via Email</span>
+                                </a>
+                                <a href="https://instagram.com/i.dont.kn__" target="_blank" rel="noopener noreferrer" class="channel-btn btn-ig-custom">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>Message on Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Workflow Timeline -->
+    <section class="workflow-section" id="workflow">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Methodology</span>
+                <h2 class="section-title">Production Workflow</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <!-- Custom Non-Linear Editing Timeline representation -->
+            <div class="nle-timeline reveal">
+                <div class="timeline-ruler">
+                    <span class="ruler-mark">00:00:00:00</span>
+                    <span class="ruler-mark">00:01:00:00</span>
+                    <span class="ruler-mark">00:02:00:00</span>
+                    <span class="ruler-mark">00:03:00:00</span>
+                    <span class="ruler-mark">00:04:00:00</span>
+                </div>
+                
+                <div class="nle-tracks">
+                    <!-- Track V2: VFX & Grades -->
+                    <div class="nle-track track-video">
+                        <div class="track-header">V2 Grade & FX</div>
+                        <div class="track-clips">
+                            <div class="clip clip-pink" style="flex: 2;">
+                                <span>Mood Grading LUTs</span>
+                            </div>
+                            <div class="clip clip-empty" style="flex: 1.5;"></div>
+                            <div class="clip clip-pink" style="flex: 1.2;">
+                                <span>VFX Elements</span>
+                            </div>
+                            <div class="clip clip-empty" style="flex: 0.8;"></div>
+                            <div class="clip clip-pink" style="flex: 1.5;">
+                                <span>Final Grade Pass</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track V1: Vision cuts -->
+                    <div class="nle-track track-video active-track">
+                        <div class="track-header">V1 Vision (Cuts)</div>
+                        <div class="track-clips">
+                            <div class="clip clip-purple clip-active" style="flex: 1.2;">
+                                <div class="clip-step-num">1</div>
+                                <span>Consultation</span>
+                            </div>
+                            <div class="clip clip-purple clip-active" style="flex: 1.3;">
+                                <div class="clip-step-num">2</div>
+                                <span>Footage Review</span>
+                            </div>
+                            <div class="clip clip-purple clip-active" style="flex: 1.5;">
+                                <div class="clip-step-num">3</div>
+                                <span>A-Roll & B-Roll Assembly</span>
+                            </div>
+                            <div class="clip clip-purple clip-active" style="flex: 1;">
+                                <div class="clip-step-num">4</div>
+                                <span>Fine Adjustments</span>
+                            </div>
+                            <div class="clip clip-purple clip-active" style="flex: 1.2;">
+                                <div class="clip-step-num">5</div>
+                                <span>High-Res Export</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track A1: Audio design -->
+                    <div class="nle-track track-audio">
+                        <div class="track-header">A1 Sound Design</div>
+                        <div class="track-clips">
+                            <div class="clip clip-blue" style="flex: 1.5;">
+                                <span>Atmosphere beds</span>
+                            </div>
+                            <div class="clip clip-blue" style="flex: 2.2;">
+                                <span>Whooshes & Sub Hits</span>
+                            </div>
+                            <div class="clip clip-blue" style="flex: 1.3;">
+                                <span>Dialogue Mix & SFX Polish</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail descriptions of steps -->
+            <div class="timeline-step-details reveal">
+                <div class="details-grid">
+                    <div class="step-detail-card" data-step="1">
+                        <h4>1. Consultation</h4>
+                        <p>Defining narrative goals, storyboard pacing, music direction, references, and overall brand identity alignment.</p>
+                    </div>
+                    <div class="step-detail-card" data-step="2">
+                        <h4>2. Footage Review</h4>
+                        <p>Detailed curation, quality verification, cataloging cameras/framerates, and structuring assets for efficient workflow.</p>
+                    </div>
+                    <div class="step-detail-card" data-step="3">
+                        <h4>3. Core Editing</h4>
+                        <p>Rough cut assembly, synchronization, high-impact pacing edits, transitions, motion graphics, and basic VFX overlays.</p>
+                    </div>
+                    <div class="step-detail-card" data-step="4">
+                        <h4>4. Revisions</h4>
+                        <p>Collaborative fine-tuning, audio leveling updates, client feedback incorporation, and frame-by-frame review.</p>
+                    </div>
+                    <div class="step-detail-card" data-step="5">
+                        <h4>5. Delivery</h4>
+                        <p>Rendering in raw cinematic codecs (ProRes/DNxHR/H.264) optimized for web, theatrical, or broadcast delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">Feedback</span>
+                <h2 class="section-title">Client Reviews</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Card 1 -->
+                <div class="testimonial-card reveal">
+                    <div class="card-glow"></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Nayana brought our automotive launch to life. The edits were sleek, fast, and the sound design was top notch."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Karan S.</h4>
+                            <span class="author-role">Founder, Throttle Media</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="testimonial-card reveal">
+                    <div class="card-glow"></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Amazing storytelling and color grading. Our luxury real estate property walkthroughs look like premium cinema."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-large"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Ananya R.</h4>
+                            <span class="author-role">Real Estate Broker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="testimonial-card reveal">
+                    <div class="card-glow"></div>
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"Super fast turnaround time and incredibly receptive to feedback. Highly recommend for creator social media content!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="author-info">
+                            <h4 class="author-name">Rohan M.</h4>
+                            <span class="author-role">Digital Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info reveal">
+                    <span class="section-tag">Let's Create</span>
+                    <h2 class="contact-title">Start a Project</h2>
+                    <p class="contact-desc">
+                        Ready to elevate your visual content? Send a direct email or slide into my Instagram DMs for collaborations, custom quotes, or editing consulting.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="item-icon"><i class="fa-solid fa-envelope animate-pulse-glow"></i></div>
+                            <div class="item-text">
+                                <span>Email Me</span>
+                                <span>nayanasreed@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="item-icon"><i class="fa-brands fa-instagram animate-pulse-glow"></i></div>
+                            <div class="item-text">
+                                <span>Instagram Direct Message</span>
+                                <a href="https://instagram.com/i.dont.kn__" target="_blank" rel="noopener noreferrer">@i.dont.kn__</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="contact-box reveal">
+                    <div class="contact-box-glow"></div>
+                    <div class="contact-box-content">
+                        <h3>Send a Message</h3>
+                        <p>Fill in the form below — your message lands directly in my inbox.</p>
+
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="cf-name">Your Name</label>
+                                <input type="text" id="cf-name" name="from_name" placeholder="e.g. Arjun Sharma" required autocomplete="off">
+                                <span class="field-error" id="err-name"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-email">Your Email</label>
+                                <input type="email" id="cf-email" name="reply_to" placeholder="you@example.com" required autocomplete="off">
+                                <span class="field-error" id="err-email"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-msg">Message</label>
+                                <textarea id="cf-msg" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                                <span class="field-error" id="err-msg"></span>
+                            </div>
+                            <button type="submit" class="contact-card-btn btn-email form-submit-btn" id="form-submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span id="form-btn-text">Send Message</span>
+                            </button>
+                            <div class="form-feedback" id="form-feedback"></div>
+                        </form>
+
+                        <a href="https://instagram.com/i.dont.kn__" target="_blank" rel="noopener noreferrer" class="contact-card-btn btn-instagram" style="margin-top:14px">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Message on Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container footer-content">
+            <a href="#home" class="footer-logo">
+                <svg viewBox="0 0 90 28" width="90" height="28" class="nav-logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff2d78" />
+                            <stop offset="50%" stop-color="#b44fff" />
+                            <stop offset="100%" stop-color="#00d4ff" />
+                        </linearGradient>
+                    </defs>
+                    <text x="2" y="22" font-family="Arial Black, Impact, sans-serif" font-size="22" font-weight="900" fill="url(#logoGradFooter)" letter-spacing="3">NEZOR</text>
+                </svg>
+            </a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#intro">Intro</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 NEZOR by Nayana Sree. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>
